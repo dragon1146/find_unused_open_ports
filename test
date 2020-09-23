@@ -1,0 +1,29 @@
+
+        thing = {"FastEthernet0/0": {"operstatus": "up", }}
+
+"{{ item.key }} {{ item.value.operstatus }}"
+
+_ to access "FastEthernet0/0" 
+
+
+item={
+       'key': u'FastEthernet0/0',
+       'value': {
+                 u'macaddress': u'c201.33dd.0000',
+                 u'lineprotocol': u'up',
+                 u'description': None, 
+                 u'duplex': None, 
+                 u'mediatype': None, 
+                 u'mtu': 1500, 
+                 u'operstatus': u'up', 
+                 u'bandwidth': 10000, 
+                 u'ipv4': [
+                           {
+                            u'subnet': u'24', 
+                            u'address': u'192.168.56.11'
+                           }
+                          ], 
+                 u'type': u'Gt96k FE'
+                }
+      }
+

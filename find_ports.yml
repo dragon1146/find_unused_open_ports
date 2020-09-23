@@ -1,0 +1,19 @@
+---
+- name: add down interfaces to file
+  hosts: nex1
+  connection: network_cli
+  gather_facts: false
+
+
+  tasks:
+
+    - name: get facts
+      setup:
+
+    - name: add down interfaces to file
+      lineinfile:
+        line: "{{ item.key }} {{ item.value.operstatus }}"
+        path: "{{ playbook_dir }}/{{ inventory_hostname }}_down_ports.txt"
+        create: yes
+      with_items: "{{ ansible_net_interfaces | dict2items }}"
+      when: item.value.operstatus == 'down'

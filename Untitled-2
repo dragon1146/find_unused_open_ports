@@ -1,0 +1,30 @@
+
+
+
+
+
+skipping: [r1] => (item={'key': u'FastEthernet0/1', 'value':
+{u'macaddress': None, u'lineprotocol': u'down', u'description': None,
+u'duplex': None, u'mediatype': None, u'mtu': 1500, u'operstatus':
+u'administratively down', u'bandwidth': 1544, u'ipv4': [], u'type':
+None}})  
+=> {
+    "ansible_loop_var": "item", 
+    "changed": false, 
+    "item": {
+        "key": "FastEthernet0/1", 
+        "value": {
+            "bandwidth": 1544, 
+            "description": null, 
+            "duplex": null, 
+            "ipv4": [], 
+            "lineprotocol": "down", 
+            "macaddress": null, 
+            "mediatype": null, 
+            "mtu": 1500, 
+            "operstatus": "administratively down", 
+            "type": null
+        }
+    }, 
+    "skip_reason": "Conditional result was False"
+}
